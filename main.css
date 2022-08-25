@@ -1,0 +1,49 @@
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    border-left:  2px solid red;
+    border-right:  2px solid red;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.main-slider {
+    border: 2px solid blue;
+}
+
+.main-slider .some-item {
+    border: 2px solid green;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    position: relative;
+}
+
+.main-slider .some-item__text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.btn {
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    cursor:  pointer;
+    transition: background-color 0.5s ease;
+}
+
+.btn:hover:enabled {
+    background-color: #fff;
+}
+
+.btn--disabled {
+    color: #bbb;
+}
+
+.main-slider__buttons {
+    margin: 10px;
+}
