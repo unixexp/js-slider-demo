@@ -24,6 +24,9 @@ function Slider(sliderWrapperClassName) {
 			this.state.position = this.POSITION_START;
 			this.state.offset = 0;
 			track.style.marginLeft = 0;
+
+			if (this.callback !== null)
+				this.callback(this.state);
 		});
 
 	this.slideRight = () => {
