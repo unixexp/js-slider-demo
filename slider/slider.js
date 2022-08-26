@@ -3,7 +3,6 @@ function Slider(sliderWrapperClassName) {
 	const sliderWrapper = document.querySelector("." + sliderWrapperClassName);
 	const slider = sliderWrapper.querySelector(".slider");
 	const track = slider.querySelector(".slider__track");
-	const items = track.querySelectorAll(".slider__item");
 
 	this.POSITION_START = 1;
 	this.POSITION_MIDDLE = 2;
@@ -30,12 +29,14 @@ function Slider(sliderWrapperClassName) {
 		});
 
 	this.slideRight = () => {
+		const items = track.querySelectorAll(".slider__item");
+
 		this.state.itemWidth = items[0].offsetWidth;
 		this.state.maxOffset = track.offsetWidth - slider.offsetWidth;
 		this.state.offset = this.state.offset - this.state.itemWidth;
 
 		if (this.state.maxOffset > 0) {
-			if (Math.abs(this.state.offset) > this.state.maxOffset) {
+			if (Math.abs(this.state.offset) >= this.state.maxOffset) {
 				this.state.offset = this.state.maxOffset * -1;
 				this.state.position = this.POSITION_END;
 			} else {
@@ -50,6 +51,8 @@ function Slider(sliderWrapperClassName) {
 	}
 
 	this.slideLeft = () => {
+		const items = track.querySelectorAll(".slider__item");
+
 		this.state.itemWidth = items[0].offsetWidth;
 		this.state.offset = this.state.offset + this.state.itemWidth;
 

@@ -8,6 +8,8 @@ mainSliderSlideLeftButton.addEventListener("click", mainSlider.slideLeft);
 mainSliderSlideRightButton.addEventListener("click", mainSlider.slideRight);
 
 function watchSliderState(state) {
+	// console.log(state);
+
 	if (state.position == mainSlider.POSITION_START) {
 		mainSliderSlideLeftButton.disabled = true;
 		mainSliderSlideLeftButton.classList.add("btn--disabled");

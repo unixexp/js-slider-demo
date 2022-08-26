@@ -3,7 +3,7 @@
 }
 
 .slider__track {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     overflow: hidden;
     display: inline-flex;
     flex-wrap: nowrap;
@@ -12,5 +12,5 @@
 }
 
 .slider__item {
-    margin: 0 10px;
+    padding: 0 10px;
 }
